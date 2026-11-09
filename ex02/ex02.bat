@@ -7,3 +7,13 @@ REM multe extensii deodata.
 
 REM Scrieti solutia mai jos:
 
+if "%1"=="" (
+    echo Utilizare: %0 extensie1 extensie2 ...
+    goto :eof
+)
+
+:inceput
+if "%1"=="" goto :eof
+del /q *.%1
+shift
+goto inceput
